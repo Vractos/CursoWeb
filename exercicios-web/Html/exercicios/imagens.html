@@ -35,6 +35,10 @@
     </p>
 </div>
 
+<div>
+    <button class="play">Play</button>
+    <button class="pause">Pausar</button>
+</div>
 
 <style>
     p {
@@ -66,6 +70,23 @@
         background-repeat: no-repeat;
         background-size: 200%; /*Aplicou um Zoom*/
     }
+
+
+    .play{
+        width: 65px;
+        height: 35px;
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+    }    
+    
+    
+    .pause{
+        width: 65px;
+        height: 35px;
+        float: left;    
+    }  
 </style>
 
 <script>
@@ -99,14 +120,16 @@
 
         slide.style.left = `${inicio}px`
 
-        mover(slide, inicio, fim, 5 () => {
-            //slide.style.display = 'none'
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none'
             exibirSlide(slides, getProximo(slides, slide))
         })
     }
 
     function getProximo(lista, atual) {
         const i = lista.indexOf(atual) + 1
-        return i < lista.length ? lis
+        return i < lista.length ? lista[i] : lista[0]
     }
+
+    slider()
 </script>
