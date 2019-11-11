@@ -36,6 +36,10 @@
 
         document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()
         document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause()
+
+        setInterval(() => {
+            const percentual = (video.currentTime / video.duration) * 100  
+        })
     }
 
     configurarVideo('meuVideo')
