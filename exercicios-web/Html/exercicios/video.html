@@ -38,9 +38,149 @@
         document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause()
 
         setInterval(() => {
-            const percentual = (video.currentTime / video.duration) * 100  
-        })
+            const percentual = (video.currentTime / video.duration) * 100
+            const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)
+            valorDiv.style.width = `${percentual}%`
+            valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+        }, 150)
     }
 
     configurarVideo('meuVideo')
 </script>
+
+
+
+
+<!-- Código alternativo
+
+<section>
+        <h1>Vídeo</h1>
+    
+        <video id="meuVideo" width="800" height="450" controls controlsList="nodownload">
+            <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4" />
+            Seu browser não suporta a tag vídeo
+        </video>
+    
+        <div wm-progresso="meuVideo" class="progresso">
+            <div></div> //progresso
+        </div>
+        <div id="controles">
+            <button wm-play="meuVideo">Play</button>
+            <button wm-pause="meuVideo">Pause</button>
+            <input wm-volume type="range" min="0" max="1" step="0.1">
+        </div>
+    </section>
+    
+    <style>
+        body {
+        width: 960px;
+        height: 660px;
+        margin: 10px auto;
+        background-color: #dcdcdc;
+        border: 1px solid #444;
+    }
+    
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 28px;
+    }
+    
+    section {
+        margin: 15px;
+        padding: 0px;
+    }
+    
+    video {
+        margin-left: 60px;
+    }
+    
+    #controles {
+        margin: 4px auto;
+        width: 200px;
+        text-align: center;
+    }
+    
+    button {
+        width: 50px;
+        text-transform: uppercase;
+        background-color: white;
+        margin: 0 5px;
+    }
+    
+    input {
+        margin: 5px 0;
+    }
+    
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: 1px solid #444;
+        margin: 20px auto;
+    }
+    
+    .progresso > div {
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+        font-family: Verdana, "Trebuchet MS";
+    }
+    </style>
+    
+    <script>
+        const vid = document.getElementById("meuVideo")
+    const bar = document.querySelector('[wm-progresso]>div')
+    const play = document.querySelector('[wm-play]')
+    const pause = document.querySelector('[wm-pause]')
+    const vol = document.querySelector('[wm-volume]')
+    
+    // Desabilita controles e menu de contexto
+    vid.controls = false
+    vid.oncontextmenu = function () { return false }
+    
+    // Altera cor dos botões PLAY e PAUSE
+    function CorBotoes(colorPlay, colorPause) {
+        play.style.backgroundColor = colorPlay
+        pause.style.backgroundColor = colorPause
+    }
+    
+    // Comportamento do botão PLAY
+    play.onclick = function (e) {
+        vid.play()
+        CorBotoes('YellowGreen', 'White')
+        progresso(bar)
+    }
+    
+    // Comportamento do botão PAUSE
+    pause.onclick = function (e) {
+        if (vid.currentTime > 0 && vid.currentTime < vid.duration) {
+            vid.pause()
+            CorBotoes('White', 'Orange')
+        }
+    }
+    
+    // Comportamento do seletor de VOLUME
+    vol.onchange = function (e) {
+        vid.volume = vol.value
+    }
+    
+    // Barra de Progresso
+    function progresso(b) {
+        const currTime = vid.currentTime
+        const durat = vid.duration
+        let perc = (currTime / durat) * 100
+        perc = perc > 100 ? 100 : perc
+        b.style.width = `${perc}%`
+        b.innerHTML = `${perc.toFixed(1)}%`
+        setTimeout(() => {
+            if (perc >= 100)
+                CorBotoes('White', 'White')
+            if (!vid.paused && perc < 100)
+                progresso(b)
+        }, 5)
+    }
+    </script>
+-->
