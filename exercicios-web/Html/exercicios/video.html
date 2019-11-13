@@ -13,10 +13,11 @@
 
 <style>
     .progresso {
-        height: 10px;
+        height: 15px;
         width: 500px;
         border: solid 1px #444444;
         margin: 20px;
+        background: rgba(179, 178, 178, 0.322);
     }
 
     .progresso > div {
@@ -41,6 +42,7 @@
             const percentual = (video.currentTime / video.duration) * 100
             const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)
             valorDiv.style.width = `${percentual}%`
+            valorDiv.style.color = 'White'
             valorDiv.innerHTML = `${percentual.toFixed(1)}%`
         }, 150)
     }
