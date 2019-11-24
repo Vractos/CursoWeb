@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
+
     <title>Inicial</title>
+
     <link rel="stylesheet" href="../css/inicialPage.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div id="logo">
-        <span>
-            <img src="C:\Users\paulo\Pictures/LogoCorCerta.png" 
-            height="450px" width="900px"
-            alt="Uall">
-        </span>    
-    </div>
-    <div id="conteudo">
-        <p id="recepção">
-            <h1>Parabéns!</h1>
-            <h2>Você acaba de ganhar um super desconto!</h2>
-        </p>
-        <input type="tel" name="numeroDeTelefone" placeholder="Insira seu telefone">
-        <button name="gerar">Gerar cupom</button>
+    <div id="container_background">
+        <div id="logo">
+            <img src="C:\Users\Vinicius\Pictures\Logos\LogoCorCerta(2).png" height="67.5px" width="59.5px" alt="Uall">
+        </div>
+        <p>Parabéns!Você acaba de ganhar <strong>R$ 15</strong> para fazer suas compras sem sair de casa</p>
+        <span>Aproveite 😉</span>
+        <div>
+            <select id="countrys_numbers">
+                <option value="Argentina">+54</option>
+                <option value="Brasil" selected>+55</option>
+                <option value="Chile">+56</option>
+                <option value="Paraguai">+595</option>
+            </select>
+            <input type="tel" id="cel_number" placeholder="Insira seu número de telefone">.
+            <button>Pegar meu desconto</button>
+        </div>
     </div>
 </body>
+
 </html>

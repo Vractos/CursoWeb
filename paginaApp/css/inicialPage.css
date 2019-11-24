@@ -1,52 +1,5 @@
-body {
-    margin: 0%;
+#container_background {
+    display: block;
+    position: absolute;
+    background-color: red;
 }
-
-#logo, #conteudo {
-    text-align: center;
-}
-
-h1 {
-    font-size: 40px;
-    margin: 20px;
-    font-family:'Noto Sans', sans-serif; ;
-}
-
-h2 {
-    display: inline;
-    font-size: 25px;
-    margin: 20px;
-    font-family:'Noto Sans', sans-serif; ;
-}
-
-button {
-    background-color: rgb(255, 252, 54);
-    height: 60px;
-    width: 150px;
-    border-radius: 5px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border: none;
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-    margin-left: 4px;
-    margin-top: 10px;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 18px;
-    }
-
-input {
-    border: solid 2px rgb(255, 252, 54);
-    border-radius: 15px;
-    border-radius: 15px;
-    height: 51px;
-    width: 200px;
-    margin-top: 10px;
-}
-
-[placeholder] {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 18px;
-}
-
