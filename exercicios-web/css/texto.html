@@ -23,15 +23,20 @@
             font-size: 100%;
             font-size: 16px;
             font-size: 12pt;
-            
+
             /* Unidades absolutas */
-            font-size: 100px; /* Tamanho do pixel é relativo */
-            font-size: 72pt; /* pontos */
-            font-size: 1in; /* polegada */
+            font-size: 100px;
+            /* Tamanho do pixel é relativo */
+            font-size: 72pt;
+            /* pontos */
+            font-size: 1in;
+            /* polegada */
 
             /* unidades relativas */
-            font-size: 2.2em; /* pega como referencia o font-size de elemento em que ela esta dentro, e multiplica pelo valor que for colocado ( no caso a referencia desse <p> é uma div) */
-            font-size: 2.2rem; /* mesma coisa do "em", porem o "rem" pega direto da raiz (o html) */
+            font-size: 2.2em;
+            /* pega como referencia o font-size de elemento em que ela esta dentro, e multiplica pelo valor que for colocado ( no caso a referencia desse <p> é uma div) */
+            font-size: 2.2rem;
+            /* mesma coisa do "em", porem o "rem" pega direto da raiz (o html) */
             font-size: 50vh;
             font-size: 10vw;
 
@@ -43,7 +48,28 @@
             font-weight: 100;
             font-style: italic;
             text-transform: uppercase;
-            text-decoration: overline underline;
+            /* text-decoration: overline underline; */
+            word-spacing: 10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: white;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.417);
+        }
+
+        .destaque:active {
+            box-shadow: none;
         }
     </style>
 </head>
