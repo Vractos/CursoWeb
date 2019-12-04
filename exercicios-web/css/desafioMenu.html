@@ -7,7 +7,20 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        * {
+            box-sizing: border-box;     /* O padrão do 'box-sizing' é 'content-box', porem ao mudar p/ 'border-box' ele considera a borda como parte do tamanho (borda e elemento como uma coisa só) */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
+        }
+
+        .cabecalho {
+            background-color: #333333;
+            border-bottom: solid 5px #4faddb;
+        }
     </style>
 </head>
 
