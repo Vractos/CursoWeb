@@ -4,6 +4,7 @@ body {
 
 * {
     font-family: 'Solway', serif;
+    box-sizing: border-box;
 }
 
 #background {
@@ -47,7 +48,7 @@ h2 {
     font-size: 1em;
 }
 
-p {
+span {
     margin: 2.5%;
 }
 
