@@ -68,7 +68,7 @@ button {
     font-size: 1em;
     transition: all 0.4s ease 0s;
     text-align: center;
-    box-shadow: 0px 0px 20px 4px #d4d4d4;
+    margin: 2% 0;
 }
 
 button:hover {
@@ -76,7 +76,10 @@ button:hover {
     transition: all 0.4s ease 0s;
 }
 
-button:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+button:focus{
+    outline-style: none !important;
+}
+
+.container {
+    margin: 30% 0 0 0;
 }
