@@ -18,8 +18,8 @@ body {
 }
 
 #container_background {
-    width: 575px;
-    height: 575px;
+    width: 35rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,23 +35,25 @@ body {
 }
 
 .container_text {
-    font-size: 1.3em;
+    font-size: 1.5rem;
     text-align: center;
     padding: 1% 4%;
-    margin: 15% 0 0 0;
+    margin: 8% 0 0 0;
 }
 
 h1 {
     font-size: 1.3em;
-    margin: 0%;
+    margin: 0 0 2% 0;
 }
 
 h2 {
     font-size: 1em;
+    margin: 2%;
 }
 
 span {
     margin: 2.5%;
+    font-size: 1.1em;
 }
 
 strong {
@@ -59,17 +61,17 @@ strong {
 }
 
 button {
-    width: 31%;
-    height: 8%;
-    border-radius: 30px;
+    width: 70%;
+    height: 12%;
+    border-radius: 12px;
     border: none;
     color: white;
     background-color: #ffc66c;
     padding: 0%;
-    font-size: 1em;
+    font-size: 1.5em;
     transition: all 0.4s ease 0s;
     text-align: center;
-    margin: 3% 0;
+    margin: 13% 0 0 0;
 }
 
 button:hover {
@@ -81,7 +83,33 @@ button,#countrys_numbers,#cell_number:focus{
     outline-style: none !important;
 }
 
-.container {
+.container_inputs {
+    height: 9.6%;
+    width: 85%;
+    padding: 0 0 0.9% 0;
+    border-bottom: solid 1px rgba(77, 77, 77, 0.637);
+    margin: 10% 0 0 0;
+}
+
+#countrys_numbers , #cell_number {
+    height: 100%;
+    border: none;
+}
+
+#countrys_numbers {
+    background-color: rgba(121, 121, 121, 0.109);
+    color: rgba(77, 77, 77, 0.938);
+    border-radius: 5px;
+    margin-right: 3%;
+    width: 15%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#cell_number {
+    width: 81%;
+}
+/* .container {
     margin: 5% 0 0 0;
     height: 7%;
     width: 50%;
@@ -102,4 +130,4 @@ button,#countrys_numbers,#cell_number:focus{
 
 #cell_number {
     width: 70%;
-}
+} */
