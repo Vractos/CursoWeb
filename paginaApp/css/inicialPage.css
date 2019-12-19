@@ -22,13 +22,14 @@ body {
     height: 575px;
     display: flex;
     flex-direction: column;
-    border-radius: 27px;
-    /* -webkit-border-radius: 27px; */
-    /* -moz-border-radius: 27px; */
+    align-items: center;
     background-color: rgb(255, 255, 255);
-    /* -webkit-box-shadow: 0px 1px 35px 0.10px rgba(121, 121, 121, 0.250); */
-    /* -moz-box-shadow: 0px 1px 35px 0.10px rgba(121, 121, 121, 0.250); */
+    border-radius: 27px;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
     box-shadow: 0px 1px 35px 0.10px rgba(121, 121, 121, 0.250);
+    -webkit-box-shadow: 0px 1px 35px 0.10px rgba(121, 121, 121, 0.250);
+    -moz-box-shadow: 0px 1px 35px 0.10px rgba(121, 121, 121, 0.250);
     position: fixed;
     top: 7%;
 }
@@ -57,11 +58,25 @@ strong {
 }
 
 button {
-    width: 25%;
-    height: 5%;
-    border-radius: 10px;
+    width: 31%;
+    height: 8%;
+    border-radius: 30px;
     border: none;
     color: white;
     background-color: #ffc66c;
     padding: 0%;
+    font-size: 1em;
+    transition: all 0.4s ease 0s;
+    text-align: center;
+    box-shadow: 0px 0px 20px 4px #d4d4d4;
+}
+
+button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    transition: all 0.4s ease 0s;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
