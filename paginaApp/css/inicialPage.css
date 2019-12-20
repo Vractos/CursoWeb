@@ -29,6 +29,7 @@ body {
     align-items: center;
     border-radius: 13px;
 }
+
 #container_background {
     width: 35rem;
     height: 35rem;
@@ -58,7 +59,7 @@ h1 {
     margin: 0 0 2% 0;
 }
 
-span {
+.container_text>span {
     margin: 2.5%;
     font-size: 1.1em;
 }
@@ -71,6 +72,8 @@ h2 {
     font-size: 1em;
     margin: 2%;
 }
+
+/* INPUTS */
 
 .container_inputs {
     height: 9.6%;
@@ -100,6 +103,8 @@ h2 {
     font-size: 1.2rem;
 }
 
+/* BOTÃO */
+
 button {
     width: 70%;
     height: 12%;
@@ -123,25 +128,36 @@ button, #countrys_numbers, #cell_number:focus {
     outline-style: none !important;
 }
 
-/* .container {
-    margin: 5% 0 0 0;
-    height: 7%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.is_loading span {
+    display: none;
 }
 
-#countrys_numbers , #cell_number {
-    height: 100%;
-    border-radius: 10px;
-    border:solid 1.3px #ffc66c;
+button.is_success {
+    border-radius: 100%;
+    width: 12.5%;
+    background: rgb(0, 190, 0);
 }
 
-#countrys_numbers {
-    margin-right: 5%;
-    width: 20%;
+.is_success span {
+    display: none;
 }
 
-#cell_number {
-    width: 70%;
-} */
+svg {
+    width: 0;
+    height: 0;
+}
+
+.is_success svg {
+    height: 30px;
+    width: 30px;
+}
+
+.check {
+    stroke-dasharray: 130px 130px;
+    stroke-dashoffset: 130px;
+    transition: stroke-dashoffset 500ms ease-in-out;
+}
+
+.is_success .check {
+    stroke-dashoffset: 0px;
+}
