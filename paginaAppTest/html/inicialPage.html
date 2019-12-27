@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Inicial</title>
+
+    <link rel="stylesheet" href="../css/inicialPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="..\node_modules\intl-tel-input\build\css\intlTelInput.css">
+</head>
+
+<body>
+    <main id="background">
+        <div id="container_background">
+            <div id="logo">
+                <img src="C:\Users\Vinicius\Pictures\Logos\LogoCorCerta(3).png" height="56px" width="48.5px" alt="Uall">
+            </div>
+            <div class="container_text">
+                <h1>Parabéns!</h1>
+                <span>Você acaba de ganhar <strong>R$ 15</strong> para fazer suas compras sem sair de casa.</span>
+                <h2>Aproveite :)</h2>
+            </div>
+            <div class="container_inputs">
+                <select id="countrys_numbers">
+                    <option value="Argentina">+54</option>
+                    <option value="Brasil" selected>+55</option>
+                    <option value="Chile">+56</option>
+                    <option value="Paraguai">+595</option>
+                </select>
+                <input type="text" maxlength="16" id="cell_number" placeholder="Insira seu número de telefone">
+                <script src="..\node_modules\intl-tel-input\build\js\intlTelInput.js"></script>
+                <script>
+                    var input = document.querySelector("#cell_number")
+                    window.intlTelInput(input)
+                </script>
+                <!-- <script>
+                    // Formatting INPUT
+                    function somenteNumeros (num) {
+                        var er = /[^0-9.]/
+                        er.lastIndex = 0
+                        var campo = num
+                        if (er.test(campo.value)) {
+                            campo.value = ""
+                        }
+                    }  onkeyup="somenteNumeros(this)"
+                </script> -->
+            </div>
+            <button id="button">
+                <svg viewBox="0 0 90.594 59.714">
+                    <polyline class="check" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10"
+                        points="1.768,23.532 34.415,56.179 88.826,1.768" />
+                </svg>
+                <span>Pegar meu desconto</span>
+            </button>
+        </div>
+    </main>
+</body>
+
+<script>
+    const btn = document.getElementById('button')
+
+    btn.addEventListener('click', function send() {
+        btn.classList.add('is_loading')
+
+        // fake API call
+        setTimeout(() => {
+            btn.classList.add('is_success')
+            btn.classList.remove('is_loading')
+            btn.removeEventListener('click', send);
+        });
+    });
+</script>
+
+</html>
