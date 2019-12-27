@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/inicialPage.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/intlTelInput.css">
 </head>
 
 <body>
@@ -29,7 +30,17 @@
                     <option value="Chile">+56</option>
                     <option value="Paraguai">+595</option>
                 </select>
-                <input type="text" id="cell_number" placeholder="Insira seu número de telefone">
+                <input type="text" onkeyup="somenteNumeros(this)" maxlength="16" id="cell_number" placeholder="Insira seu número de telefone">
+                <script>
+                    function somenteNumeros (num) {
+                        var er = /[^0-9.]/
+                        er.lastIndex = 0
+                        var campo = num
+                        if (er.test(campo.value)) {
+                            campo.value = ""
+                        }
+                    }
+                </script>
             </div>
             <button id="button">
                 <svg viewBox="0 0 90.594 59.714">
