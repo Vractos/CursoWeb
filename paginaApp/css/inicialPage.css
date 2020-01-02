@@ -1,6 +1,7 @@
 * {
     font-family: 'Solway', serif;
     box-sizing: border-box;
+    outline-style: none !important;
 }
 
 body {
@@ -73,35 +74,27 @@ h2 {
     margin: 2%;
 }
 
+
 /* INPUTS */
 
 .container_inputs {
     height: 9.6%;
     width: 85%;
-    padding: 0 0 0.9% 0;
+    padding: 0 0 0.5% 0;
     border-bottom: solid 1px rgba(77, 77, 77, 0.637);
     margin: 10% 0 0 0;
 }
 
-#countrys_numbers, #cell_number {
+#cell_number {
     height: 100%;
     border: none;
 }
 
-#countrys_numbers {
-    background-color: rgba(121, 121, 121, 0.109);
-    color: rgba(77, 77, 77, 0.938);
-    border-radius: 5px;
-    margin-right: 3%;
-    width: 15%;
+#cell_number {
+    width: 100%;
     font-size: 1.2rem;
-    font-weight: 600;
 }
 
-#cell_number {
-    width: 81%;
-    font-size: 1.2rem;
-}
 
 /* BOTÃO */
 
@@ -124,7 +117,8 @@ button:hover {
     transition: all 0.4s ease 0s;
 }
 
-button, #countrys_numbers, #cell_number:focus {
+button,
+#cell_number:focus {
     outline-style: none !important;
 }
 
@@ -160,4 +154,18 @@ svg {
 
 .is_success .check {
     stroke-dashoffset: 0px;
+}
+
+
+/* Flags */
+
+.iti__flag {
+    background-image: url("..\node_modules\intl-tel-input\build\img\flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("\..node_modules\intl-tel-input\build\img\flags@2x.png");
+    }
 }
