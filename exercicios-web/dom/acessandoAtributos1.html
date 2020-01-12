@@ -16,7 +16,7 @@
     </div>
     <script>
         const img = document.querySelector('img')
-        console.log('getAttribute', img.getAttribute('src')) // This "getAttribute" in parentheses is for console identification only and doesn't interfere with anything
+        console.log('getAttribute', img.getAttribute('src')) // This "getAttribute" in parentheses is for console identification only and doesn't interfere with anything.
         console.log('src', img.src)
         console.log('["src"]', img['src'])
         console.log('alt', img.alt)
@@ -30,6 +30,12 @@
         console.log('NodeType', src.nodeType)
         console.log('NodeName', src.nodeName)
         console.log('NodeValue', src.nodeValue)
+
+        const link = document.querySelector('a')
+        console.log('Elemento "a"............')
+        console.log('href', link.href)
+        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo Texto' //Change text value
     </script>
 </body>
 
