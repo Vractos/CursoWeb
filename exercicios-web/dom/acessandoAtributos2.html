@@ -18,22 +18,21 @@
     </div>
     <script>
         const lista = document.querySelector('div ul[destino="escritório"]')
-        console.log('Elemento "ul".......')
+        console.log('Elemento "ul"...............')
         console.log('childNodes', lista.childNodes)
-        console.log('destino', lista.destino) //'destino' is a custom property, therefore not recognized by the browser.
+        console.log('destino', lista.destino)
         console.log('getAttribute', lista.getAttribute('destino'))
         console.log('hasAttribute', lista.hasAttribute('destino'))
-        lista.setAttribute('destino', 'empresa') // https://developer.mozilla.org/pt-BR/docs/Web/API/Element/setAttribute
-        lista.setAttribute('status', 'aberto') // In this case, as he doesn't have this attribute mentioned, he will create a new attribute (with what was quoted).
+        lista.setAttribute('destino', 'empresa')
+        lista.setAttribute('status', 'aberto')
         lista.removeAttribute('destino')
-        console.log(lista.dataset)
         console.log(lista.dataset.urgencia)
         lista.dataset.urgencia = 4
         console.log(lista.getAttribute('data-urgencia'))
 
-        //cuidado
+        // cuidado
         const label = document.querySelector('label')
-        console.log(label.for) // don't will go work, because 'for' is a term exclusive of language. Have to use 'htmlFor'
+        console.log(label.for)
         console.log(label.htmlFor)
         console.log(label.getAttribute('for'))
     </script>
