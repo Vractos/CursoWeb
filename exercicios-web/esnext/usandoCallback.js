@@ -7,7 +7,7 @@ const getTurma = (letra, callback) => {
         let resultado = ''
 
         res.on('data', dados => {
-            resultado += dados
+            resultado += dados    
         })
 
         res.on('end', () => {
