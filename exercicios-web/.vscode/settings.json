@@ -1,3 +1,25 @@
 {
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "cSpell.words": [
+        "codigo",
+        "padrao",
+        "transformacao"
+    ],
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "green",
+            "border": "none",
+            "fontWeight": "bold",
+            "backgroundColor": "transparet"
+        },
+        {
+            "text": "TODO:",
+            "border": "0.5px solid #f74d4d",
+            "borderRadius": "4px",
+            "color": "#f74d4d",
+            "fontWeight":"bold",
+            "backgroundColor": "transparet",
+        }
+    ]
 }
