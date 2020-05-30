@@ -22,5 +22,6 @@
             "fontWeight":"bold",
             "backgroundColor": "transparet",
         }
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
